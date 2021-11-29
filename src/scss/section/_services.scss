@@ -1,0 +1,154 @@
+@import "../vars";
+
+.services {
+  .services__wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .column {
+      div {
+        mask-image: url("../img/mask-list.png");
+        mask-size: cover;
+        mask-position: left bottom;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20.7552vw;
+        height: 2.0953vw;
+        font-size: 1.0417vw;
+        font-weight: 500;
+        color: $secondary-purple;
+        margin-bottom: 0.5521vw;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          padding-bottom: 0.4427vw;
+          margin-bottom: 0.3906vw;
+          display: flex;
+          justify-content: space-between;
+
+          &:not(:first-child) {
+            border-bottom: 2px solid $orange;
+          }
+
+          .list__title {
+            mask-image: url("../img/mask-list-title.png");
+            mask-size: cover;
+            mask-position: left bottom;
+            background: $secondary-orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20.6255vw;
+            height: 3.2099vw;
+            font-size: 1.7188vw;
+            line-height: 3.5417vw;
+            font-weight: 500;
+            color: $secondary-purple;
+            margin-bottom: 1.0521vw;
+          }
+
+
+          span {
+            font-size: 1.1458vw;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.4583vw;
+        margin-bottom: 0.3958vw;
+        font-weight: 700;
+      }
+
+      button {
+        font-size: 1.4583vw;
+        font-weight: 700;
+        line-height: 1.0938vw;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 20.7302vw;
+        height: 3.2099vw;
+        background: $green;
+        mask-image: url("../img/form-btn-bg.png");
+        mask-position: left bottom;
+        mask-size: cover;
+        border: none;
+        margin: 0 auto 1.7188vw;
+        transition: all .4s ease;
+
+        &:hover {
+          background: $secondary-orange;
+          cursor: pointer;
+
+          span {
+            background: $green;
+            color: white;
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 5.1083vw;
+          height: 3.2099vw;
+          font-size: 1.6667vw;
+          line-height: 1.0938vw;
+          font-weight: 900;
+          color: $secondary-purple;
+          background: $secondary-orange;
+          mask-image: url("../img/form-btn-arrow-bg.png");
+          mask-position: left bottom;
+          mask-size: cover;
+          margin-right: 3.6458vw;
+          transition: all .4s ease;
+        }
+
+        svg {
+          margin-left: 0.5208vw;
+        }
+      }
+    }
+
+    .services__text {
+      width: 22.4375vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 3.2813vw;
+        line-height: 3.2813vw;
+        font-weight: 700;
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        &:after {
+          content: '';
+          display: flex;
+          width: 100%;
+          margin: 0.6250vw 0;
+          border-bottom: 2px solid #fff;
+        }
+      }
+
+      p {
+        font-size: 1.7188vw;
+        line-height: 2.1354vw;
+        text-align: center;
+      }
+    }
+  }
+}

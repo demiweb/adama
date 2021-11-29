@@ -1,0 +1,125 @@
+@import "../vars";
+
+.video {
+  position: relative;
+
+  .video__wrapper {
+    min-height: 100vh;
+
+    h1 {
+      font-size: 2.6042vw;
+      line-height: 3.1250vw;
+      text-align: center;
+      margin: 0 0 1.7448vw;
+    }
+
+    p {
+      font-size: 1.4063vw;
+      line-height: 1.7708vw;
+      margin-bottom: 1.6927vw;
+      text-align: center;
+    }
+
+    .video__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .video__player {
+        width: 44.3750vw;
+        height: 24.8958vw;
+        position: relative;
+        display: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 5.1563vw;
+          height: 5.1563vw;
+          border: 1px solid $green;
+          border-radius: 50%;
+          text-decoration: none;
+          background: white;
+          z-index: 5;
+          transition: width .3s ease, height .3s ease;
+
+          &:hover {
+            width: 4.5833vw;
+            height: 4.5833vw;
+          }
+        }
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 10;
+        }
+
+        iframe[src=''] {
+          z-index: 0;
+        }
+
+      }
+
+      .video__player.active {
+        display: block;
+      }
+      .video__btn {
+        margin: 1.7448vw 0;
+        display: flex;
+        justify-content: center;
+
+        a {
+          text-decoration: none;
+          color: white;
+          background: $purple;
+          font-size: 1.4583vw;
+          line-height: 1.7708vw;
+          width: 17.7083vw;
+          height: 2.6042vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          mask-image: url("../img/video-btn-bg.png");
+          mask-position: center;
+          mask-size: cover;
+          transition: all .4s ease;
+
+          &:hover {
+            background: $green;
+          }
+
+          span {
+            display: inline-block;
+            font-weight: 700;
+
+            &:after {
+              content: '';
+              display: inline-block;
+              margin: 0 0.5208vw;
+              background: white;
+              width: 0.1563vw;
+              height: 1.1458vw;
+            }
+          }
+        }
+
+        a.active {
+          background:$secondary-orange;
+        }
+      }
+    }
+  }
+}

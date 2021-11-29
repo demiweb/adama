@@ -1,0 +1,88 @@
+@import "../vars";
+
+.hero {
+  height: 100vh;
+  min-height: 100vh;
+  box-shadow: 1px -200px 10px black;
+
+  .hero_wrapper {
+    height: 100%;
+    position: relative;
+
+
+    .hero-slider {
+      .hero-slider__wrapper {
+        .hero-slider__slide {
+          width: 100vw;
+          height: 100vh;
+
+          div {
+            width: 44.5833vw;
+            height: 100%;
+            margin: 0 auto 0 12.4375vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .title {
+              font-size: 7.0313vw;
+              line-height: 6.2500vw;
+              font-weight: 600;
+              max-width: 100%;
+
+              &:after {
+                content: '';
+                display: block;
+                width: 35.1042vw;
+                margin: 2.4323vw auto 1.4323vw;
+                border-bottom: 0.2083vw solid white;
+              }
+            }
+
+            .subtitle {
+              display: block;
+              font-size: 2.8646vw;
+              line-height: 2.8646vw;
+              max-width: 100%;
+              margin-bottom: 0.5208vw;
+            }
+
+            .text {
+              display: block;
+              font-size: 1.5104vw;
+              line-height: 1.8750vw;
+
+              span {
+                font-weight: 700;
+                color: $secondary-orange;
+              }
+            }
+          }
+
+          .hero__bottle {
+            position: absolute;
+            top: 2.6042vw;
+            right: 22.43vw;
+            z-index: 2;
+            width: 19.6354vw;
+            height: 42.8125vw;
+          }
+
+          .hero__tomato {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            img {
+              margin-left: auto;
+              margin-bottom: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

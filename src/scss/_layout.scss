@@ -1,0 +1,18 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  background: url("../img/texture.png") $secondary-purple;
+  position: relative;
+}

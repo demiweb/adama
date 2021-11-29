@@ -1,0 +1,17 @@
+.logo {
+  position: fixed;
+  top: 2.1354vw;
+  left: 2.1354vw;
+  width: 10.4167vw;
+  height: 3.9063vw;
+  z-index: 50;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,205 @@
+@import "../vars";
+
+.form {
+  .form__wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 3.1250vw;
+      line-height: 3.5938vw;
+      margin-bottom: 1.2396vw;
+      text-align: center;
+
+      span {
+        color: $secondary-orange;
+      }
+    }
+
+    p {
+      font-size: 1.4583vw;
+      line-height: 1.8229vw;
+      margin: 0 auto 2.6250vw;
+      text-align: center;
+      max-width: 33.5417vw;
+    }
+
+    form {
+      div {
+        mask-image: url("../img/form-bg.png");
+        mask-position: left bottom;
+        mask-size: cover;
+        background: $green;
+        width: 81.7115vw;
+        height: 13.4411vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto 2.6563vw;
+
+        label {
+          font-size: 1.1458vw;
+          line-height: 1.0938vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          input {
+            mask-image: url("../img/input-bg.png");
+            mask-position: left bottom;
+            mask-size: cover;
+            border: none;
+            width: 16.3630vw;
+            height: 2.6984vw;
+            padding: 0 0.7813vw;
+            display: flex;
+            margin-top: 0.3385vw;
+          }
+        }
+      }
+
+      button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 20.7302vw;
+        height: 3.2099vw;
+        font-size: 1.4583vw;
+        line-height: 1.0938vw;
+        font-weight: 700;
+        color: white;
+        background: $green;
+        mask-image: url("../img/form-btn-bg.png");
+        mask-position: left bottom;
+        mask-size: cover;
+        border: none;
+        margin: 0 auto 1.7188vw;
+        transition: all .4s ease;
+
+        &:hover {
+          background: $secondary-orange;
+          cursor: pointer;
+
+          span {
+            background: $green;
+            color: white;
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 5.1083vw;
+          height: 3.2099vw;
+          font-size: 1.6667vw;
+          line-height: 1.0938vw;
+          font-weight: 900;
+          color: $secondary-purple;
+          background: $secondary-orange;
+          mask-image: url("../img/form-btn-arrow-bg.png");
+          mask-position: left bottom;
+          mask-size: cover;
+          margin-right: 1.0365vw;
+          transition: all .4s ease;
+        }
+
+
+      }
+
+      button ~ div {
+        mask-image: none;
+        background: transparent;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+        label {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:first-child {
+            margin-right: 2.8802vw;
+            flex-direction: row-reverse;
+
+            span {
+              margin-left: 0.9271vw;
+            }
+          }
+
+          &:last-child {
+            span {
+              margin-right: 0.5781vw;
+            }
+          }
+
+          input[type='checkbox'] {
+            display: none;
+          }
+
+          input[type='checkbox'] + .input-checkbox {
+            width: 1.0839vw;
+            height: 1.0839vw;
+            border: 0.1042vw solid #fff;
+            position: relative;
+
+            svg {
+              path {
+                stroke: transparent;
+              }
+            }
+          }
+
+          input[type='checkbox']:checked + .input-checkbox {
+            svg {
+              position: absolute;
+              bottom: 1px;
+              left: 0.1042vw;
+
+              path {
+                stroke: #fff;
+              }
+            }
+          }
+
+          input[type='file'] {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+
+  .form__bottom {
+    height: 2.6042vw;
+    background: $secondary-orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 0.4010vw;
+        width: 2.3042vw;
+        height: 1.3146vw;
+      }
+    }
+  }
+}
