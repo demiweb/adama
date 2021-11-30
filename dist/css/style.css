@@ -32,6 +32,38 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 991px) {
+  .logo {
+    -webkit-mask-image: url("../img/mask-logo.png");
+            mask-image: url("../img/mask-logo.png");
+    -webkit-mask-size: cover;
+            mask-size: cover;
+    -webkit-mask-position: left top;
+            mask-position: left top;
+    width: 262.6px;
+    height: 58.36px;
+    top: 0;
+    left: -131.3px;
+    background: #9D1D96;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logo img {
+    width: 89.41px;
+    height: 33.59px;
+    margin-right: 28.3px;
+  }
+}
 .btn-to-form {
   position: fixed;
   bottom: 0;
@@ -630,8 +662,20 @@ body {
   height: 1.3146vw;
 }
 
+.services .services-bg {
+  width: 93.75vw;
+  height: 109.9385vw;
+  position: absolute;
+  left: 61.7708vw;
+  bottom: 4.5417vw;
+  z-index: -1;
+}
+.services .services-bg img {
+  width: 100%;
+  height: 100%;
+}
 .services .services__wrapper {
-  min-height: 100vh;
+  min-height: calc(100vh - 2.6042vw);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -644,6 +688,23 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.services .services__wrapper .column {
+  margin-left: 5.2604vw;
+  min-height: 35.8974vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .services .services__wrapper .column div {
   -webkit-mask-image: url("../img/mask-list.png");
@@ -674,10 +735,9 @@ body {
 }
 .services .services__wrapper .column ul {
   list-style: none;
+  margin-bottom: auto;
 }
 .services .services__wrapper .column ul li {
-  padding-bottom: 0.4427vw;
-  margin-bottom: 0.3906vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -689,6 +749,8 @@ body {
 }
 .services .services__wrapper .column ul li:not(:first-child) {
   border-bottom: 2px solid #F89E18;
+  padding-bottom: 0.4427vw;
+  margin-bottom: 0.3906vw;
 }
 .services .services__wrapper .column ul li .list__title {
   -webkit-mask-image: url("../img/mask-list-title.png");
@@ -753,7 +815,7 @@ body {
   -webkit-mask-size: cover;
           mask-size: cover;
   border: none;
-  margin: 0 auto 1.7188vw;
+  margin: 0 auto;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -819,6 +881,7 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 8.3333vw;
 }
 .services .services__wrapper .services__text span {
   font-size: 3.2813vw;
@@ -842,4 +905,51 @@ body {
   font-size: 1.7188vw;
   line-height: 2.1354vw;
   text-align: center;
+}
+.services .services__bottom {
+  height: 2.6042vw;
+  background: #752157;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.services .services__bottom p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.services .services__bottom p img {
+  margin-left: 0.401vw;
+  width: 2.3042vw;
+  height: 1.3146vw;
+}
+
+@media screen and (max-width: 991px) {
+  .services .services-bg {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .services .services-bg img {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }

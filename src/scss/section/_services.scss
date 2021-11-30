@@ -1,14 +1,34 @@
 @import "../vars";
 
 .services {
+  .services-bg {
+    width: 93.7500vw;
+    height: 109.9385vw;
+    position: absolute;
+    left: 61.7708vw;
+    bottom: 4.5417vw;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .services__wrapper {
-    min-height: 100vh;
+    min-height: calc(100vh - 2.6042vw);
     display: flex;
     justify-content: center;
     align-items: center;
 
 
     .column {
+      margin-left: 5.2604vw;
+      min-height: 35.8974vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
       div {
         mask-image: url("../img/mask-list.png");
         mask-size: cover;
@@ -27,15 +47,16 @@
 
       ul {
         list-style: none;
+        margin-bottom: auto;
 
         li {
-          padding-bottom: 0.4427vw;
-          margin-bottom: 0.3906vw;
           display: flex;
           justify-content: space-between;
 
           &:not(:first-child) {
             border-bottom: 2px solid $orange;
+            padding-bottom: 0.4427vw;
+            margin-bottom: 0.3906vw;
           }
 
           .list__title {
@@ -83,7 +104,7 @@
         mask-position: left bottom;
         mask-size: cover;
         border: none;
-        margin: 0 auto 1.7188vw;
+        margin: 0 auto;
         transition: all .4s ease;
 
         &:hover {
@@ -126,6 +147,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-left: 8.3333vw;
 
       span {
         font-size: 3.2813vw;
@@ -148,6 +170,104 @@
         font-size: 1.7188vw;
         line-height: 2.1354vw;
         text-align: center;
+      }
+    }
+  }
+
+  .services__bottom {
+    height: 2.6042vw;
+    background: $secondary-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 0.4010vw;
+        width: 2.3042vw;
+        height: 1.3146vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .services {
+    .services-bg {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    .services__wrapper {
+
+
+      .column {
+
+        div {
+        }
+
+        ul {
+
+          li {
+
+            &:not(:first-child) {
+            }
+
+            .list__title {
+            }
+
+
+            span {
+            }
+          }
+        }
+
+        p {
+        }
+
+        button {
+
+          &:hover {
+
+            span {
+            }
+          }
+
+          span {
+          }
+
+          svg {
+          }
+        }
+      }
+
+      .services__text {
+
+        span {
+
+          &:after {
+          }
+        }
+
+        p {
+        }
+      }
+    }
+
+    .services__bottom {
+
+      p {
+
+        img {
+        }
       }
     }
   }
