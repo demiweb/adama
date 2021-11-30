@@ -1,7 +1,7 @@
 new Swiper('.hero-slider', {
     direction: 'horizontal',
     loop: true,
-    autoplay: true,
+    // autoplay: true,
 
 });
 
@@ -61,7 +61,7 @@ window.addEventListener('scroll', btnToForm)
 window.addEventListener('load', btnToForm)
 
 // Перемещение к секции при клике на кнопку следующая секция
-const btnNextSection = [...document.querySelectorAll('.btn-next-section')]
+const btnNextSection = [...document.querySelectorAll('.btn-to-form-next-section')]
 
 if (!btnNextSection.length) {
 
@@ -80,7 +80,7 @@ if (!btnNextSection.length) {
     })
 }
 
-const videoTabs = [...document.querySelectorAll('.video__btn a')]
+const videoTabs = [...document.querySelectorAll('.video a:not(.btn-next-section)')]
 
 if (!videoTabs.length) {
 
@@ -91,10 +91,12 @@ if (!videoTabs.length) {
 
 
             const id = elem.getAttribute('href').replace('#', '')
+            // console.log(id)
             const parentSection = elem.parentElement.parentElement.parentElement.parentElement.id
+            console.log(parentSection)
             const video = document.getElementById(id)
             const videoPlayer = document.querySelectorAll(`#${parentSection} .video__player`)
-            const videoLinks = document.querySelectorAll(`#${parentSection} .video__btn a`)
+            const videoLinks = document.querySelectorAll(`#${parentSection} a:not(.btn-next-section)`)
 
             const iframe = document.querySelectorAll(`#${parentSection} iframe`)
             iframe.forEach(iframe => {
@@ -103,8 +105,8 @@ if (!videoTabs.length) {
                 }
             })
 
-
             if (!video.classList.contains('active')) {
+
                 videoLinks.forEach(element => {
                     element.classList.remove('active')
                 })
@@ -118,7 +120,7 @@ if (!videoTabs.length) {
     })
 }
 
-const videoBtn = [...document.querySelectorAll('.video__player > a')]
+const videoBtn = [...document.querySelectorAll('.video__player > button')]
 
 if (!videoBtn.length) {
 

@@ -5,10 +5,6 @@
   justify-content: space-around;
   width: 20.6771vw;
   height: 4.5313vw;
-  position: absolute;
-  bottom: 58px;
-  left: 50%;
-  transform: translateX(-50%);
   color: #fff;
   text-decoration: none;
   z-index: 10;
@@ -16,5 +12,25 @@
   span {
     font-size: 1.2500vw;
     font-weight: 700;
+  }
+}
+
+.btn-next-section__hero {
+  position: absolute;
+  bottom: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 991px) {
+  .btn-next-section__hero {
+    width: 2.0656vw;
+    height: 2.4218vw;
+    right: 2.0484vw;
+    left: auto;
+    bottom: 1.5136vw;
+    span {
+      display: none;
+    }
   }
 }

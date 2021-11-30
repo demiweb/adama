@@ -16,3 +16,14 @@ body {
   background: url("../img/texture.png") $secondary-purple;
   position: relative;
 }
+
+.container {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+}

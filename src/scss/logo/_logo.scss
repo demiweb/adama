@@ -23,22 +23,34 @@
     mask-image: url("../img/mask-logo.png");
     mask-size: cover;
     mask-position: left top;
-    width: 262.6px;
-    height: 58.36px;
+    width: 26.4985vw;
+    height: 5.8890vw;
     top: 0;
-    left: calc(-262.6px / 2);
-    background: $purple;
+    left: calc(-26.4985vw / 2);
+    background: $secondary-purple;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
-    &:hover {
+    img {
+      width: 9.0222vw;
+      height: 3.3895vw;
+      margin-right: 2.8557vw;
     }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 75.0286vw;
+    height: 16.6743vw;
+    left: calc(-75.0286vw / 2);
 
     img {
-      width: 89.41px;
-      height: 33.59px;
-      margin-right: 28.3px;
+      width: 25.5457vw;
+      height: 9.5971vw;
+      margin-right: 8.0857vw;
     }
   }
 }
