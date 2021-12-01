@@ -445,7 +445,7 @@ body {
   font-size: 2.6042vw;
   line-height: 3.125vw;
   text-align: center;
-  margin: 0 0 1.7448vw;
+  margin: 0 0 1.0417vw;
 }
 .video .video__wrapper p {
   font-size: 1.4063vw;
@@ -508,13 +508,24 @@ body {
   text-decoration: none;
   background: white;
   z-index: 5;
-  -webkit-transition: width 0.3s ease, height 0.3s ease;
-  -o-transition: width 0.3s ease, height 0.3s ease;
-  transition: width 0.3s ease, height 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .video .video__wrapper .video__body .video__player button:hover {
   width: 4.5833vw;
   height: 4.5833vw;
+}
+.video .video__wrapper .video__body .video__player button:hover svg {
+  width: 1.9985vw;
+  height: 1.7129vw;
+}
+.video .video__wrapper .video__body .video__player svg {
+  width: 2.2484vw;
+  height: 1.9271vw;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .video .video__wrapper .video__body .video__player iframe {
   position: absolute;
@@ -561,13 +572,16 @@ body {
           align-items: center;
   -webkit-mask-image: url("../img/video-btn-bg.png");
           mask-image: url("../img/video-btn-bg.png");
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  -webkit-mask-position: left center;
+          mask-position: left center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  margin-right: 0.9375vw;
 }
 .video .video__wrapper .video__body .video__btn a:hover {
   background: #009845;
@@ -621,6 +635,9 @@ body {
     font-weight: 500;
     text-align: center;
     margin: 0 0 1.3421vw;
+  }
+  .video .video__wrapper-mobile p {
+    margin-bottom: 1.3421vw;
   }
   .video .video__wrapper-mobile .video__body {
     display: -webkit-box;
@@ -748,21 +765,25 @@ body {
     border-radius: 50%;
     background: white;
     z-index: 5;
-    -webkit-transition: width 0.3s ease, height 0.3s ease;
-    -o-transition: width 0.3s ease, height 0.3s ease;
-    transition: width 0.3s ease, height 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .video .video__wrapper-mobile .video__body .video__player button:hover {
     width: 4.5833vw;
     height: 4.5833vw;
+    cursor: pointer;
   }
   .video .video__wrapper-mobile .video__body .video__player button:hover svg {
-    width: 2.8052vw;
-    height: 2.9919vw;
+    width: 1.8737vw;
+    height: 1.9984vw;
   }
   .video .video__wrapper-mobile .video__body .video__player button svg {
     width: 2.8052vw;
     height: 2.9919vw;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .video .video__wrapper-mobile .video__body .video__player iframe {
     position: absolute;
@@ -893,15 +914,16 @@ body {
   max-width: 33.5417vw;
 }
 .form .form__wrapper form div {
-  -webkit-mask-image: url("../img/form-bg.png");
-          mask-image: url("../img/form-bg.png");
-  -webkit-mask-position: left bottom;
-          mask-position: left bottom;
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  -webkit-mask-image: url("../img/svg/form-field.svg");
+          mask-image: url("../img/svg/form-field.svg");
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   background: #009845;
   width: 81.7115vw;
-  height: 13.4411vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -918,6 +940,7 @@ body {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin: 0 auto 2.6563vw;
+  padding: 1.4948vw 0 1.599vw;
 }
 .form .form__wrapper form div label {
   font-size: 1.1458vw;
@@ -935,24 +958,24 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 16.363vw;
+  width: auto;
+  margin-bottom: 0.9323vw;
+  position: relative;
+}
+.form .form__wrapper form div label .label {
+  margin-bottom: 0.6385vw;
 }
 .form .form__wrapper form div label input {
-  -webkit-mask-image: url("../img/input-bg.png");
-          mask-image: url("../img/input-bg.png");
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  border: none;
-  width: 16.363vw;
+  position: relative;
+  z-index: 10;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+  width: 16.6292vw;
   height: 2.6984vw;
-  padding: 0 0.7813vw;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0.3385vw;
+  padding: 0 30px;
 }
 .form .form__wrapper form div label input::-webkit-input-placeholder {
   color: transparent;
@@ -968,6 +991,52 @@ body {
 }
 .form .form__wrapper form div label input::placeholder {
   color: transparent;
+}
+.form .form__wrapper form div label input + .field {
+  width: 16.363vw;
+  height: 2.6984vw;
+  position: absolute;
+  bottom: 0;
+}
+.form .form__wrapper form div label input + .field:after, .form .form__wrapper form div label input + .field:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: url("../img/svg/form-field.svg") no-repeat center center/auto 100%;
+  position: absolute;
+  bottom: 0;
+}
+.form .form__wrapper form div label input + .field:after {
+  left: 0;
+  background-position: left center;
+}
+.form .form__wrapper form div label input + .field:before {
+  right: 0;
+  background-position: right center;
+}
+.form .form__wrapper form div label input:invalid + .field {
+  width: 16.363vw;
+  height: 2.6984vw;
+  position: absolute;
+  bottom: 0;
+}
+.form .form__wrapper form div label input:invalid + .field:after, .form .form__wrapper form div label input:invalid + .field:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: url("../img/svg/form-field-invalid.svg") no-repeat center center/auto 100%;
+  position: absolute;
+  bottom: 0;
+}
+.form .form__wrapper form div label input:invalid + .field:after {
+  left: 0;
+  background-position: left center;
+}
+.form .form__wrapper form div label input:invalid + .field:before {
+  right: 0;
+  background-position: right center;
 }
 .form .form__wrapper form div label input:focus {
   outline: none;
@@ -1158,6 +1227,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #752157;
 }
 .form .form__bottom p img {
   margin-left: 0.401vw;

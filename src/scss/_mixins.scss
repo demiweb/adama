@@ -1,0 +1,27 @@
+@mixin field ($bg) {
+  width: 16.3630vw;
+  height: 2.6984vw;
+  position: absolute;
+  bottom: 0;
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: url($bg) no-repeat center center / auto 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &:after {
+    left: 0;
+    background-position: left center;
+  }
+
+  &:before {
+    right: 0;
+    background-position: right center;
+  }
+}

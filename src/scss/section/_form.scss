@@ -1,4 +1,5 @@
 @import "../vars";
+@import "../mixins";
 
 .form {
   .form__wrapper {
@@ -29,17 +30,18 @@
 
     form {
       div {
-        mask-image: url("../img/form-bg.png");
-        mask-position: left bottom;
-        mask-size: cover;
+        mask-image: url("../img/svg/form-field.svg");
+        mask-position: center center;
+        mask-size: 100%;
+        mask-repeat: no-repeat;
         background: $green;
         width: 81.7115vw;
-        height: 13.4411vw;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         margin: 0 auto 2.6563vw;
+        padding: 1.4948vw 0 1.5990vw;
 
         label {
           font-size: 1.1458vw;
@@ -47,22 +49,35 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          width: 16.3630vw;
+          width: auto;
+          margin-bottom: 0.9323vw;
+          position: relative;
+
+          .label {
+            margin-bottom: 0.6385vw;
+          }
 
           input {
-            mask-image: url("../img/input-bg.png");
-            mask-position: center center;
-            mask-size: cover;
-            border: none;
-            width: 16.3630vw;
+            position: relative;
+            z-index: 10;
+            appearance: none;
+            background: none;
+            border: 0;
+            width: 16.6292vw;
             height: 2.6984vw;
-            padding: 0 0.7813vw;
-            display: flex;
-            margin-top: 0.3385vw;
+            padding: 0 30px;
 
             &::placeholder {
               color: transparent;
             }
+          }
+
+          input + .field {
+            @include field("../img/svg/form-field.svg");
+          }
+
+          input:invalid + .field {
+            @include field("../img/svg/form-field-invalid.svg");
           }
 
           input:focus {
@@ -214,6 +229,7 @@
     p {
       display: flex;
       align-items: center;
+      color: #752157;
 
       img {
         margin-left: 0.4010vw;
@@ -373,6 +389,7 @@
 @media screen and (max-width: 767px) {
   .form {
     margin-top: 16.9714vw;
+
     .form__wrapper {
 
       h1 {
