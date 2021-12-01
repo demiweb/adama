@@ -200,7 +200,6 @@
           }
         }
       }
-
     }
   }
 
@@ -373,12 +372,15 @@
 
 @media screen and (max-width: 767px) {
   .form {
+    margin-top: 16.9714vw;
     .form__wrapper {
 
       h1 {
-        font-size: 11.8750vw;
-        line-height: 11.5625vw;
+        font-size: 10.8571vw;
+        line-height: 10.5714vw;
         max-width: 100%;
+        margin-bottom: 2.8571vw;
+        font-weight: 500;
       }
 
       p {

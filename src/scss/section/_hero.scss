@@ -1,80 +1,90 @@
 @import "../vars";
 
 .hero {
-  height: 100vh;
   min-height: 100vh;
-  box-shadow: 1px -200px 10px black;
+  box-shadow: inset 0 -30px 100px 0 #372D2A;
 
   .hero_wrapper {
-    height: 100%;
+    min-height: 100vh;
     position: relative;
 
+    .hero__content {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+
+      div {
+        width: 44.5833vw;
+        height: 100%;
+        margin: 0 auto 0 12.4375vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .title {
+          font-size: 7.0313vw;
+          line-height: 6.2500vw;
+          font-weight: 600;
+          max-width: 100%;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 35.1042vw;
+            margin: 2.4323vw auto 1.4323vw;
+            border-bottom: 0.2083vw solid white;
+          }
+        }
+
+        .subtitle {
+          display: block;
+          font-size: 2.8646vw;
+          line-height: 2.8646vw;
+          max-width: 100%;
+          margin-bottom: 0.5208vw;
+        }
+
+        .text {
+          display: block;
+          font-size: 1.5104vw;
+          line-height: 1.8750vw;
+
+          span {
+            font-weight: 700;
+            color: $secondary-orange;
+          }
+        }
+      }
+
+      .hero__bottle {
+        position: absolute;
+        top: 2.6042vw;
+        right: 22.43vw;
+        z-index: 2;
+        width: 19.6354vw;
+        height: 42.8125vw;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
 
     .hero-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
       .hero-slider__wrapper {
         .hero-slider__slide {
           width: 100%;
           height: 100vh;
           overflow-x: hidden;
-
-          div {
-            width: 44.5833vw;
-            height: 100%;
-            margin: 0 auto 0 12.4375vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            .title {
-              font-size: 7.0313vw;
-              line-height: 6.2500vw;
-              font-weight: 600;
-              max-width: 100%;
-
-              &:after {
-                content: '';
-                display: block;
-                width: 35.1042vw;
-                margin: 2.4323vw auto 1.4323vw;
-                border-bottom: 0.2083vw solid white;
-              }
-            }
-
-            .subtitle {
-              display: block;
-              font-size: 2.8646vw;
-              line-height: 2.8646vw;
-              max-width: 100%;
-              margin-bottom: 0.5208vw;
-            }
-
-            .text {
-              display: block;
-              font-size: 1.5104vw;
-              line-height: 1.8750vw;
-
-              span {
-                font-weight: 700;
-                color: $secondary-orange;
-              }
-            }
-          }
-
-          .hero__bottle {
-            position: absolute;
-            top: 2.6042vw;
-            right: 22.43vw;
-            z-index: 2;
-            width: 19.6354vw;
-            height: 42.8125vw;
-
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
 
           .hero__tomato {
             width: 113.5417vw;
@@ -82,7 +92,7 @@
             position: absolute;
             top: 0;
             right: -79.3125vw;
-            z-index: 1;
+            z-index: 0;
 
             img {
               width: 100%;
@@ -95,40 +105,76 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .hero {
+    min-height: 182.8571vw;
 
     .hero_wrapper {
+      min-height: 100%;
+      position: relative;
 
+      .hero__content {
+        position: relative;
+        min-height: 100%;
+
+        div {
+          width: calc(100vw - 40px);
+          margin: auto;
+
+          .title {
+            margin-top: calc(85vw + 2vw);
+            font-size: 12.0000vw;
+            line-height: 12.5714vw;
+
+            &:after {
+              width: 100%;
+              border-bottom: 1.0000vw solid white;
+              margin: 3.0000vw 0 3.6000vw;
+            }
+          }
+
+          .subtitle {
+            font-size: 8.0000vw;
+            line-height: 9.4286vw;
+            margin-bottom: 6.0000vw;
+          }
+
+          .text {
+            font-size: 5.1429vw;
+            line-height: 5.7143vw;
+          }
+        }
+
+        .hero__bottle {
+          top: 6.5714vw;
+          width: 37vw;
+          height: 85vw;
+          right: calc(50% - (37vw / 2));
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
 
       .hero-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
         .hero-slider__wrapper {
           .hero-slider__slide {
-
-            div {
-
-              .title {
-                &:after {
-                }
-              }
-
-              .subtitle {
-              }
-
-              .text {
-
-                span {
-                }
-              }
-            }
-
-            .hero__bottle {
-              img {
-              }
-            }
-
             .hero__tomato {
+              width: 220vw;
+              height: 78vw;
+              right: -158.6250vw;
+
               img {
+                width: 100%;
+                height: 100%;
               }
             }
           }

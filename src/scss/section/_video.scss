@@ -282,12 +282,18 @@
 @media screen and (max-width: 767px) {
   .video {
     .video__wrapper-mobile {
-
-
       h1 {
         font-size: 10.8571vw;
         line-height: 11.1429vw;
-        margin: 0 0 1.1429vw;
+        margin: 0 0 3.8000vw;
+      }
+
+      p {
+        text-align: center;
+        font-size: 4.5714vw;
+        line-height: 5.1429vw;
+        max-width: 64.2857vw;
+        margin: 0 auto 5.6857vw;
       }
 
       .video__body {
@@ -298,6 +304,19 @@
             width: 86.3057vw;
             height: 12.9400vw;
             margin-bottom: 2.0000vw;
+
+            span:not([class='icon']) {
+              &:after {
+                content: '';
+                display: inline-block;
+                margin: 0 2.2857vw;
+                background: white;
+                width: 0.5714vw;
+                height: 4.5714vw;
+                vertical-align: center;
+
+              }
+            }
 
             .icon {
               width: 20.1400vw;
@@ -325,22 +344,22 @@
           }
 
           button {
-            width: 6.8618vw;
-            height: 6.8618vw;
+            width: 19.4286vw;
+            height: 19.4286vw;;
 
             &:hover {
-              width: 4.5833vw;
-              height: 4.5833vw;
-
+              width: 12.9772vw;
+              height: 12.9772vw;
               svg {
-                width: 2.8052vw;
-                height: 2.9919vw;
+                width: 5.3054vw;
+                height: 5.6584vw;
               }
             }
 
             svg {
-              width: 2.8052vw;
-              height: 2.9919vw;
+              width: 7.9429vw;
+              height: 8.4714vw;
+              transition: all .3s ease;
             }
           }
 
