@@ -37,7 +37,7 @@
 
 @media screen and (max-width: 767px) {
   .btn-next-section {
-    margin: 4.3714vw 0 40.2857vw;
+    margin-top: 2.3714vw;
     width: 60.4286vw;
     height: auto;
     display: flex;
@@ -58,6 +58,10 @@
   .btn-next-section__hero {
     width: 2.0656vw;
     right: 5.8000vw;
-    bottom: -60vw;
+    bottom: 4.2857vw;
+  }
+
+  .btn-next-section__def {
+    padding-bottom: 23.5vw;
   }
 }

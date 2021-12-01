@@ -110,7 +110,7 @@
           justify-content: center;
           align-items: center;
           mask-image: url("../img/video-btn-bg.png");
-          mask-position: left center;
+          mask-position: center center;
           mask-size: 100%;
           mask-repeat: no-repeat;
           transition: all .4s ease;
@@ -166,7 +166,6 @@
         line-height: 3.9354vw;
         font-weight: 500;
         text-align: center;
-        margin: 0 0 1.3421vw;
       }
 
       p {
@@ -183,7 +182,7 @@
           a {
             font-size: 1.8163vw;
             line-height: 2.3209vw;
-            color: #FFFFFF;
+            color: #fff;
             text-decoration: none;
             width: 30.4319vw;
             height: 4.5701vw;
@@ -191,8 +190,9 @@
             justify-content: start;
             align-items: center;
             mask-image: url("../img/video-btn-bg.png");
-            mask-position: right center;
-            mask-size: cover;
+            mask-position:center center;
+            mask-size: 100%;
+            mask-repeat: no-repeat;
             transition: all .4s ease;
             margin-bottom: 1.3824vw;
 
@@ -233,7 +233,7 @@
 
         .video__player {
           width: 30.4813vw;
-          height: 17.3562vw;
+          height: 16.2562vw;
           margin-bottom: 1.0394vw;
           position: relative;
           display: none;
@@ -300,11 +300,13 @@
 
 @media screen and (max-width: 767px) {
   .video {
+    min-height: 100vh;
     .video__wrapper-mobile {
+      justify-content: flex-start;
       h1 {
         font-size: 10.8571vw;
         line-height: 11.1429vw;
-        margin: 0 0 3.8000vw;
+        margin: 11.7143vw 0 4.0000vw;
       }
 
       p {
@@ -340,7 +342,7 @@
             .icon {
               width: 20.1400vw;
               height: 100%;
-              margin-left: 11.8286vw;
+              margin-left: 12.8286vw;
 
 
               svg {
@@ -354,12 +356,15 @@
 
         .video__player {
           width: 86.3057vw;
-          height: 49.1429vw;
+          height: 48.1429vw;
           margin-bottom: 3.0286vw;
 
+
           img {
+            border-radius: 12.8571vw 2.8571vw;
             width: 100%;
             height: 100%;
+            border: 1px solid white;
           }
 
           button {

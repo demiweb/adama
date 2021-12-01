@@ -20,9 +20,9 @@
 
 @media screen and (max-width: 991px) {
   .logo {
-    mask-image: url("../img/mask-logo.png");
+    mask-image: url("../img/svg/logo-mask.svg");
     mask-size: cover;
-    mask-position: left top;
+    mask-position: center center;
     width: 26.4985vw;
     height: 5.8890vw;
     top: 0;
@@ -43,9 +43,9 @@
 
 @media screen and (max-width: 767px) {
   .logo {
-    width: 75.0286vw;
-    height: 16.6743vw;
-    left: calc(-75.0286vw / 2);
+    width: 73.0286vw;
+    height: 14.6743vw;
+    left: calc(-73.0286vw / 2);
 
     img {
       width: 25.5457vw;

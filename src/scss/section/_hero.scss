@@ -107,7 +107,7 @@
 
 @media screen and (max-width: 767px) {
   .hero {
-    min-height: 182.8571vw;
+    min-height: 100%;
 
     .hero_wrapper {
       min-height: 100%;
@@ -122,34 +122,35 @@
           margin: auto;
 
           .title {
-            margin-top: calc(85vw + 2vw);
+            margin-top: 85vw;
             font-size: 12.0000vw;
             line-height: 12.5714vw;
 
             &:after {
               width: 100%;
               border-bottom: 1.0000vw solid white;
-              margin: 3.0000vw 0 3.6000vw;
+              margin: 2.4000vw 0 3.4000vw;
             }
           }
 
           .subtitle {
             font-size: 8.0000vw;
             line-height: 9.4286vw;
-            margin-bottom: 6.0000vw;
+            margin-bottom: 5.5000vw;
           }
 
           .text {
             font-size: 5.1429vw;
             line-height: 5.7143vw;
+            margin-bottom: 22.0857vw;
           }
         }
 
         .hero__bottle {
           top: 6.5714vw;
-          width: 37vw;
-          height: 85vw;
-          right: calc(50% - (37vw / 2));
+          width: 36.8vw;
+          height: 81vw;
+          right: calc(51% - (36.8vw / 2));
 
           img {
             width: 100%;
@@ -171,7 +172,6 @@
               width: 220vw;
               height: 78vw;
               right: -158.6250vw;
-
               img {
                 width: 100%;
                 height: 100%;
