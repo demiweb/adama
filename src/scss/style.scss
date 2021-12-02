@@ -14,3 +14,13 @@
 @import "section/video";
 @import "section/form";
 @import "section/services";
+
+.test {
+  width: 600px;
+  height: 600px;
+  mask-image: url("../img/mask-slider.svg");
+  mask-size: 100%;
+  mask-position: left top;
+  mask-repeat: no-repeat;
+  background: red;
+}

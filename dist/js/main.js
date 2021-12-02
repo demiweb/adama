@@ -2,6 +2,11 @@ new Swiper('.hero-slider', {
     direction: 'horizontal',
     loop: true,
     autoplay: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
+    speed: 3000,
 });
 
 const formTo = [...document.querySelectorAll('.btn-to-form')]
@@ -47,7 +52,7 @@ function btnToForm() {
         const y = section.getBoundingClientRect().top + window.pageYOffset;
         const windowTop = window.pageYOffset
 
-        if (windowTop > y || windowTop === y) {
+        if ((windowTop + 350) > y || windowTop === y) {
             formTo[0].classList.add('hidden')
         } else {
             formTo[0].classList.remove('hidden')
@@ -91,16 +96,20 @@ if (!videoTabs.length) {
 
             const id = elem.getAttribute('href').replace('#', '')
             const parentSection = elem.parentElement.parentElement.parentElement.parentElement.parentElement.id
+            console.log(parentSection)
+
             const video = document.getElementById(id)
-            const videoPlayer = document.querySelectorAll(`#${parentSection} .video__player`)
+            const videoPlayer = document.querySelectorAll(`#${parentSection} .video-block`)
             const videoLinks = document.querySelectorAll(`#${parentSection} a:not(.btn-next-section)`)
 
             const iframe = document.querySelectorAll(`#${parentSection} iframe`)
             iframe.forEach(iframe => {
                 if (iframe.src !== '') {
-                    iframe.src = ''
+                    iframe.remove()
                 }
             })
+
+            $('.block-overlay').fadeIn(300);
 
             if (!video.classList.contains('active')) {
 
@@ -117,24 +126,78 @@ if (!videoTabs.length) {
     })
 }
 
-const videoBtn = [...document.querySelectorAll('.video__player > button')]
+// Scroll to anchor
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
 
-if (!videoBtn.length) {
-
-} else {
-    videoBtn.forEach(elem => {
-        elem.addEventListener('click', (e) => {
-            e.preventDefault()
-            showVideo(elem)
-        })
-    })
-}
-
-function showVideo(val) {
-    const iframe = val.nextElementSibling
-    if (iframe.tagName === 'IFRAME') {
-        iframe.src = val.dataset.src
+    if ($.attr(this, 'href') === '#') {
+        return false;
     }
 
+    let offset = 0;
+
+    if ($(window).width() < 992) {
+        offset = 0;
+    }
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - offset
+    }, 500);
+});
+
+
+let player;
+
+function createVideo(videoBlockId, videoId) {
+    player = new YT.Player(videoBlockId, {
+        videoId: videoId,
+        playerVars: {
+            // 'autoplay':1,
+            'autohide': 1,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1,
+            'playsinline': 1,
+            'fs': 0,
+            'allowsInlineMediaPlayback': true
+        },
+        events: {
+            'onReady': function (e) {
+                // e.target.mute();
+                // if ($(window).width() > 991) {
+                setTimeout(function () {
+                    e.target.playVideo();
+                }, 200);
+                // }
+            }
+        }
+    });
 }
+
+// Video
+$('.video-block:not([data-video-modal])').on('click', function () {
+    $(this).addClass('playing');
+    $(this).find('.block-overlay').fadeOut(300);
+
+    let videoId = $(this).find('.play-btn').data('video-id');
+
+    if (!videoId) {
+        videoId = $(this).data('video-id');
+    }
+
+    if (videoId == undefined) {
+        $(this).find('video')[0].play();
+    } else{
+        let videoType = $(this).data('video-type') ? $(this).data('video-type').toLowerCase() : 'youtube';
+
+        if (videoType == 'youtube') {
+            $(this).append('<div class="video-iframe" id="'+videoId+'"></div>');
+            createVideo(videoId, videoId);
+        } else if(videoType == 'vimeo'){
+            $(this).append('<div class="video-iframe" id="'+videoId+'"><iframe allow="autoplay" class="video-iframe" src="https://player.vimeo.com/video/'+videoId+'?playsinline=1&autoplay=1&transparent=0&app_id=122963"></div>');
+        }
+    }
+});
+
+
 

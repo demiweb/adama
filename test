@@ -1,0 +1,50 @@
+// Video
+$('.video-block:not([data-video-modal])').on('click', function () {
+  $(this).addClass('playing');
+  $(this).find('.block-overlay').fadeOut(300);
+
+  let videoId = $(this).find('.play-btn').data('video-id');
+
+  if (!videoId) {
+    videoId = $(this).data('video-id');
+  }
+
+  if (videoId == undefined) {
+    $(this).find('video')[0].play();
+  } else{
+    let videoType = $(this).data('video-type') ? $(this).data('video-type').toLowerCase() : 'youtube';
+
+    if (videoType == 'youtube') {
+      $(this).append('<div class="video-iframe" id="'+videoId+'"></div>');
+      createVideo(videoId, videoId);
+    } else if(videoType == 'vimeo'){
+      $(this).append('<div class="video-iframe" id="'+videoId+'"><iframe allow="autoplay" class="video-iframe" src="https://player.vimeo.com/video/'+videoId+'?playsinline=1&autoplay=1&transparent=0&app_id=122963"></div>');
+    }
+  }
+});
+
+var player;
+function createVideo(videoBlockId, videoId) {
+  player = new YT.Player(videoBlockId, {
+    videoId: videoId,
+    playerVars: {
+      'autohide': 1,
+      'showinfo' : 0,
+      'rel': 0,
+      'loop': 1,
+      'playsinline': 1,
+      'fs': 0,
+      'allowsInlineMediaPlayback': true
+    },
+    events: {
+      'onReady': function (e) {
+        // e.target.mute();
+        // if ($(window).width() > 991) {
+          setTimeout(function(){
+            e.target.playVideo();
+          }, 200);
+        // }
+      }
+    }
+  });
+}

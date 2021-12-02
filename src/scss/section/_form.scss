@@ -98,8 +98,9 @@
         color: white;
         background: $green;
         mask-image: url("../img/form-btn-bg.png");
-        mask-position: left bottom;
-        mask-size: cover;
+        mask-position: center center;
+        mask-size: 100%;
+        mask-repeat: no-repeat;
         border: none;
         margin: 0 auto 1.7188vw;
         transition: all .4s ease;
@@ -125,9 +126,10 @@
           font-weight: 900;
           color: $secondary-purple;
           background: $secondary-orange;
-          mask-image: url("../img/form-btn-arrow-bg.png");
+          mask-image: url("../img/form-btn-bg.png");
           mask-position: left bottom;
           mask-size: cover;
+          mask-repeat: no-repeat;
           margin-right: 1.0365vw;
           transition: all .4s ease;
         }
@@ -290,7 +292,7 @@
               border-bottom: 2px solid $green;
               background: transparent;
               color: white;
-              width: 100%;
+              width: 43.4286vw;
               height: 2.8254vw;
               padding: 0 0.7813vw;
               margin: 0 0 2.5227vw;
@@ -299,6 +301,10 @@
                 color: white;
               }
 
+            }
+
+            input + .field {
+              display: none;
             }
 
             input:focus {
@@ -316,11 +322,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 9.0545vw;
+            width: 22.8571vw;
             height: 5.0272vw;
+            mask-position: right bottom;
+            mask-size: cover;
+
           }
-
-
         }
 
         button ~ div {
@@ -346,6 +353,10 @@
 
             &:last-child {
               margin: 0;
+
+              .label__input-file {
+                order: 2;
+              }
             }
 
             input[type='checkbox'] + .input-checkbox {
@@ -376,6 +387,7 @@
 
       p {
         font-size: 1.2109vw;
+        color: white;
 
         img {
           width: 4.4642vw;
@@ -388,23 +400,24 @@
 
 @media screen and (max-width: 767px) {
   .form {
-    margin-top: 16.9714vw;
+    margin-top: 14.9714vw;
 
     .form__wrapper {
+      min-height: auto;
 
       h1 {
         font-size: 10.8571vw;
         line-height: 10.5714vw;
         max-width: 100%;
-        margin-bottom: 2.8571vw;
+        margin-bottom: 4.8571vw;
         font-weight: 500;
       }
 
       p {
-        font-size: 5.0000vw;
-        line-height: 5.6250vw;
-        max-width: 100%;
-        margin-bottom: 10.6250vw;
+        font-size: 4.5714vw;
+        line-height: 5.1429vw;
+        max-width: 82.0000vw;
+        margin: 0 auto 8.6250vw;
       }
 
       form {
@@ -415,15 +428,22 @@
           width: 100%;
 
           label {
-            font-size: 5.0000vw;
-            line-height: 8.1250vw;
-            margin-bottom: 7.8125vw;
+            margin-bottom: 7.1429vw;
             width: 42.4286vw;
-            height: 7.5000vw;;
+
+            .label {
+              display: none;
+            }
 
             input {
-              padding: 4px;
+              padding: 4px 0;
               height: 7.5000vw;
+              margin: 0;
+
+              &::placeholder {
+                font-size: 4.5714vw;
+                line-height: 7.4286vw;
+              }
             }
           }
         }
@@ -432,7 +452,7 @@
           width: 91.4286vw;
           height: 14.2343vw;
           font-size: 5.7143vw;
-          margin-bottom: 6.3714vw;
+          margin-bottom: 4.3714vw;
 
           span {
             height: 14.2343vw;
@@ -443,19 +463,15 @@
         }
 
         button ~ div {
+          margin-bottom: 6.0143vw;
           label {
             font-size: 4.2857vw;
             width: auto;
-
-            &:hover {
-            }
+            align-items: center;
 
             &:first-child {
               margin-right: auto;
 
-              span {
-                margin-left: 3.7429vw;
-              }
             }
 
             &:last-child {
@@ -463,25 +479,27 @@
 
               span {
                 order: 1;
-                margin-right: 4.6000vw;
               }
             }
 
 
             input[type='checkbox'] + .input-checkbox {
+              margin-left: 2.6429vw;
               width: 3.9686vw;
               height: 3.9686vw;
 
               svg {
+                margin: 0 0 2px 2px;
                 width: 3.6743vw;
                 height: 4.1400vw;
               }
             }
 
-            .input-file {
+            input[type='file'] + .input-file {
               svg {
                 width: 4.2543vw;
-                height: 5.2543vw;
+                height: 4.6543vw;
+                margin-left: 4.6000vw;
               }
             }
           }
