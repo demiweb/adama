@@ -8,16 +8,37 @@
   color: #fff;
   text-decoration: none;
   z-index: 10;
+  position: relative;
 
   span {
     font-size: 1.2500vw;
     font-weight: 700;
+    position: absolute;
+    top: 3px;
+  }
+
+  svg {
+    position: absolute;
+    bottom: 2px;
+    animation: arrow-animate 1s infinite;
+  }
+
+  @keyframes arrow-animate {
+    0% {
+      bottom: 2px;
+    }
+    50% {
+      bottom: -3px;
+    }
+    100% {
+      bottom: 2px;
+    }
   }
 }
 
 .btn-next-section__hero {
   position: absolute;
-  bottom: 58px;
+  bottom: 3.0208vw;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -29,6 +50,7 @@
     right: 2.0484vw;
     left: auto;
     bottom: 1.5136vw;
+
     span {
       display: none;
     }
@@ -39,19 +61,24 @@
   .btn-next-section {
     margin-top: 2.3714vw;
     width: 60.4286vw;
-    height: auto;
+    height: 16.5714vw;
     display: flex;
     flex-direction: column;
+
 
     span {
       font-size: 4.5714vw;
       line-height: 6.0000vw;
+      position: absolute;
+      top: 3px;
     }
 
     svg {
       margin-top: 1.4286vw;
       width: 4.8200vw;
       height: 5.6543vw;
+      position: absolute;
+      bottom: 2px;
     }
   }
 
@@ -62,6 +89,6 @@
   }
 
   .btn-next-section__def {
-    padding-bottom: 23.5vw;
+    margin-bottom: 23.5vw;
   }
 }

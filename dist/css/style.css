@@ -189,15 +189,46 @@ body {
   color: #fff;
   text-decoration: none;
   z-index: 10;
+  position: relative;
 }
 .btn-next-section span {
   font-size: 1.25vw;
   font-weight: 700;
+  position: absolute;
+  top: 3px;
+}
+.btn-next-section svg {
+  position: absolute;
+  bottom: 2px;
+  -webkit-animation: arrow-animate 1s infinite;
+          animation: arrow-animate 1s infinite;
+}
+@-webkit-keyframes arrow-animate {
+  0% {
+    bottom: 2px;
+  }
+  50% {
+    bottom: -3px;
+  }
+  100% {
+    bottom: 2px;
+  }
+}
+@keyframes arrow-animate {
+  0% {
+    bottom: 2px;
+  }
+  50% {
+    bottom: -3px;
+  }
+  100% {
+    bottom: 2px;
+  }
 }
 
 .btn-next-section__hero {
   position: absolute;
-  bottom: 58px;
+  bottom: 3.0208vw;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -220,7 +251,7 @@ body {
   .btn-next-section {
     margin-top: 2.3714vw;
     width: 60.4286vw;
-    height: auto;
+    height: 16.5714vw;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -234,11 +265,15 @@ body {
   .btn-next-section span {
     font-size: 4.5714vw;
     line-height: 6vw;
+    position: absolute;
+    top: 3px;
   }
   .btn-next-section svg {
     margin-top: 1.4286vw;
     width: 4.82vw;
     height: 5.6543vw;
+    position: absolute;
+    bottom: 2px;
   }
 
   .btn-next-section__hero {
@@ -248,7 +283,7 @@ body {
   }
 
   .btn-next-section__def {
-    padding-bottom: 23.5vw;
+    margin-bottom: 23.5vw;
   }
 }
 .hero {
