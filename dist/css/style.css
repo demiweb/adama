@@ -653,6 +653,7 @@ body {
     line-height: 3.9354vw;
     font-weight: 500;
     text-align: center;
+    margin-bottom: 2.2182vw;
   }
   .video .video__wrapper-mobile p {
     margin-bottom: 1.3421vw;
@@ -1156,7 +1157,7 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 5.1083vw;
+  width: 5.2083vw;
   height: 3.2099vw;
   font-size: 1.6667vw;
   line-height: 1.0938vw;
@@ -1165,8 +1166,8 @@ body {
   background: #F5B317;
   -webkit-mask-image: url("../img/form-btn-bg.png");
           mask-image: url("../img/form-btn-bg.png");
-  -webkit-mask-position: left bottom;
-          mask-position: left bottom;
+  -webkit-mask-position: right center;
+          mask-position: right center;
   -webkit-mask-size: cover;
           mask-size: cover;
   -webkit-mask-repeat: no-repeat;
@@ -1396,7 +1397,7 @@ body {
     outline: none;
   }
   .form .form__wrapper form button {
-    width: 32.2906vw;
+    width: 30.4319vw;
     height: 5.0272vw;
     font-size: 2.0182vw;
   }
@@ -1413,7 +1414,7 @@ body {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 22.8571vw;
+    width: 9.5863vw;
     height: 5.0272vw;
     -webkit-mask-position: right bottom;
             mask-position: right bottom;

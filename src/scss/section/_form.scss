@@ -119,7 +119,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 5.1083vw;
+          width: 5.2083vw;
           height: 3.2099vw;
           font-size: 1.6667vw;
           line-height: 1.0938vw;
@@ -127,7 +127,7 @@
           color: $secondary-purple;
           background: $secondary-orange;
           mask-image: url("../img/form-btn-bg.png");
-          mask-position: left bottom;
+          mask-position: right center;
           mask-size: cover;
           mask-repeat: no-repeat;
           margin-right: 1.0365vw;
@@ -314,7 +314,7 @@
         }
 
         button {
-          width: 32.2906vw;
+          width: 30.4319vw;
           height: 5.0272vw;
           font-size: 2.0182vw;
 
@@ -322,7 +322,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 22.8571vw;
+            width: 9.5863vw;
             height: 5.0272vw;
             mask-position: right bottom;
             mask-size: cover;
@@ -377,7 +377,6 @@
             }
           }
         }
-
       }
     }
 
